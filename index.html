@@ -19,6 +19,17 @@
     <script>
         var meubotao = document.getElementById("meubotao");
 
+        meubotao.addEventListener('click', function() {
+            var usuario = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+
+            if (usuario === "carol123" && senha === "123"){
+                alert('parabens, você logou sua conta');
+            } else {
+                alert('senha ou usuario incorreto');
+            }
+        });
+
         
     </script>
 </body>
