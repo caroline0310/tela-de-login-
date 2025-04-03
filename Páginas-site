@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Paradise - Moda Gótica</title>
+    <style>
+        body {
+            background-color: #0D021A;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        header {
+            background-color: #3A1C71;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        main {
+            margin-top: 50px;
+        }
+
+        button {
+            background-color: #1E1A4F;
+            color: white;
+            padding: 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #5A2D82;
+        }
+
+        .produto {
+            background-color: #222;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        .produto img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        a {
+            color: #8A2BE2;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function mostrarPagina(pagina) {
+            document.querySelectorAll('.pagina').forEach(p => p.style.display = 'none');
+            document.getElementById(pagina).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Página Inicial -->
+    <div id="inicio" class="pagina">
+        <header>
+            <h1>Dark Paradise</h1>
+            <p>Moda gótica inspirada em Paradise Kiss</p>
+        </header>
+        <main>
+            <button onclick="mostrarPagina('produtos')">Ver Produtos</button>
+            <button onclick="mostrarPagina('sobre')">Sobre Nós</button>
+            <button onclick="mostrarPagina('contato')">Contato</button>
+        </main>
+    </div>
+
+    <!-- Página de Produtos -->
+    <div id="produtos" class="pagina" style="display: none;">
+        <header>
+            <h1>Nossos Produtos</h1>
+        </header>
+        <main>
+            <div class="produto">
+                <img src="https://via.placeholder.com/200" alt="Vestido Gótico">
+                <p>Vestido Gótico Elegante - R$ 199,90</p>
+            </div>
+
+            <div class="produto">
+                <img src="https://via.placeholder.com/200" alt="Corset">
+                <p>Corset Preto Detalhado - R$ 149,90</p>
+            </div>
+
+            <a onclick="mostrarPagina('inicio')">Voltar</a>
+        </main>
+    </div>
+
+    <!-- Página Sobre Nós -->
+    <div id="sobre" class="pagina" style="display: none;">
+        <header>
+            <h1>Sobre Nós</h1>
+        </header>
+        <main>
+            <p>Somos uma loja inspirada na moda gótica e no anime Paradise Kiss.</p>
+            <a onclick="mostrarPagina('inicio')">Voltar</a>
+        </main>
+    </div>
+
+    <!-- Página de Contato -->
+    <div id="contato" class="pagina" style="display: none;">
+        <header>
+            <h1>Fale Conosco</h1>
+        </header>
+        <main>
+            <p>Email: contato@darkparadise.com</p>
+            <p>Instagram: @darkparadise</p>
+            <a onclick="mostrarPagina('inicio')">Voltar</a>
+        </main>
+    </div>
+
+</body>
+</html>
